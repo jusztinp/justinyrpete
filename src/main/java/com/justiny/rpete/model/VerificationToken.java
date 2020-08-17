@@ -22,6 +22,6 @@ public class VerificationToken {
     private Long id;
     private String token;
     @OneToOne(fetch = LAZY)
-    private Redditor redditor;
+    private User user;
     private Instant expiryDate;
 }
