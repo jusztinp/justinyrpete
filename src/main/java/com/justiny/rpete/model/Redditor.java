@@ -18,7 +18,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class User {
+public class Redditor {
     @Id
     @GeneratedValue(strategy = SEQUENCE)
     private Long userId;
