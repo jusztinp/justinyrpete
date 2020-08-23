@@ -58,8 +58,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         SecurityContext context1 = SecurityContextHolder.getContext();
         log.info(context1 + "");
-        Authentication context = context1.getAuthentication();
-        if (Objects.nonNull(context)) log.info(((User) context.getPrincipal()).getUsername());
+        Authentication authentication = context1.getAuthentication();
+        if (Objects.nonNull(authentication)) log.info(((User) authentication.getPrincipal()).getUsername() + "  =========--- " + authentication.getClass().toString());
     }
 
     private String getJwtFromRequest(HttpServletRequest request) {
